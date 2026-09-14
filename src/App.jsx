@@ -11,6 +11,9 @@ export default function App() {
 
     <>
       <div className='flex'>
+
+        {/* SideBar section  */}
+
         <section className='flex-1 h-screen flex flex-col bg-[#303042]'>
 
           <div className='flex flex-col text-white pl-3 pr-3 max-sm:text-xs max-md:text-sm max-lg:text-sm lg:text-sm gap-4 pt-2'>
@@ -40,16 +43,16 @@ export default function App() {
               <NavLink to="/Setting" className={({isActive})=> isActive ? 'flex place-items-center place-content-start' : 'flex place-items-center place-content-start text-white/20' }> <Settings className=' flex-1 ' /> <p className='flex-3 pl-2'> Settings </p> </NavLink>
             </div>
 
-            
-
           </div>
 
         </section>
 
 
+        {/* Hero Section and movie Cards */}
+
         <section className=' flex flex-col flex-4  bg-[#151328] px-5 overflow-hidden'>    
           
-          <div className='flex flex-col flex-1 text-white/40 gap-4 pt-2'>
+          <div className='flex flex-col flex-1 text-white/40 gap-4 pt-4'>
 
             <section className='flex flex-1 gap-4 max-sm:justify-between '>
 
@@ -71,17 +74,13 @@ export default function App() {
 
             </section>
 
-            <section className=' flex-8 mt-1'>
+            <section className=' flex-12 mt-4'>
               <SliderHero />
             </section>
 
           </div>
 
           <section>
-
-            <div className='flex flex-1 text-white mt-5'>
-              
-            </div>
 
             <Card  />
 

@@ -1,6 +1,8 @@
 import '../App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { NavLink, Routes, Route } from 'react-router';
+
 
 export default function Card() {
 
@@ -31,15 +33,22 @@ const[load,setLoad] = useState(true);
 
     <>
 
+      <div className='flex flex-1 text-white mt-5'>
+              
+        <NavLink to="/Horro" className={({isActive})=> isActive ? 'flex place-items-center place-content-start' : 'flex place-items-center place-content-start text-white/20' }> <p className='flex-3 pl-2'> Horror </p> </NavLink>
 
-      <div>
-        <Routes>
+        {/* <Routes>
 
           <Route path="/Homepage" element={<Card />} />
 
           <Route path="/:genre" element={<Card />} />
 
-        </Routes>
+        </Routes> */}
+        
+      </div>
+
+      <div>
+        
       </div>
       
       
