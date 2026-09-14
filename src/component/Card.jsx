@@ -32,10 +32,16 @@ const[load,setLoad] = useState(true);
     <>
 
 
-      <div className='flex flex-1'>
+      <div>
+        <Routes>
 
+          <Route path="/Homepage" element={<Card />} />
 
+          <Route path="/:genre" element={<Card />} />
+
+        </Routes>
       </div>
+      
       
 
     </>

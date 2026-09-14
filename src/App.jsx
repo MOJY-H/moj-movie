@@ -1,8 +1,10 @@
 import './App.css';
 import Card from './component/Card';
 import { NavLink, Routes, Route } from 'react-router';
-import {House , Compass , Layers2 , Bookmark , Play , ClockFading , FilePlay , Download , Headset , Settings} from 'lucide-react'
+import {House , Compass , Layers2 , Bookmark , Play , ClockFading , FilePlay , Download , Headset , Settings , BellDot} from 'lucide-react'
 import logo from './assets/LogoMovie.PNG'
+import prof from './assets/prof.jpg'
+import SliderHero from './component/SliderHero';
 
 export default function App() {
   return (
@@ -38,60 +40,58 @@ export default function App() {
               <NavLink to="/Setting" className={({isActive})=> isActive ? 'flex place-items-center place-content-start' : 'flex place-items-center place-content-start text-white/20' }> <Settings className=' flex-1 ' /> <p className='flex-3 pl-2'> Settings </p> </NavLink>
             </div>
 
-            <Routes>
-
-              <Route path="/Homepage" element={<Card />} />
-
-              <Route path="/:genre" element={<Card />} />
-
-            </Routes>
+            
 
           </div>
 
         </section>
 
 
-        <section className='flex-4 flex flex-col  bg-[#151328]'>    
+        <section className=' flex flex-col flex-4  bg-[#151328] px-5 overflow-hidden'>    
           
-          <div className='flex-1 bg-amber-950'>
+          <div className='flex flex-col flex-1 text-white/40 gap-4 pt-2'>
 
-            
+            <section className='flex flex-1 gap-4 max-sm:justify-between '>
+
+              <select className='bg-[#303042] flex-4 rounded-sm pl-2 max-sm:pr-5 max-sm:pl-3 max-sm:flex-0'>
+                <option value="apple">Movie</option>
+                <option value="banana">Banana</option>
+                <option value="orange">Orange</option>
+              </select>
+
+              <input type="text" placeholder='Movies, Series, Shows' className='bg-[#303042] flex-12 rounded-sm pl-2 max-sm:hidden ' />
+
+              <div className='bg-[#303042] place-content-center place-items-center rounded-sm px-2  '>
+                <BellDot  />
+              </div>
+
+              <div className=' flex-1 max-md:hidden '>
+                <img src={prof} alt="profile" className=' rounded-full h-full ' />
+              </div>
+
+            </section>
+
+            <section className=' flex-8 mt-1'>
+              <SliderHero />
+            </section>
 
           </div>
 
-          
-          <Card  />
+          <section>
+
+            <div className='flex flex-1 text-white mt-5'>
+              
+            </div>
+
+            <Card  />
+
+          </section>
           
 
         </section>
 
 
       </div>
-
-
-
-      {/* <section className='flex'>
-
-        <div className='bg-gray-300'>
-          asafafsaafafafasf
-        </div>
-
-        <nav className="flex gap-3">
-          <NavLink to="/Homepage">Home</NavLink>
-          <NavLink to="/Anime">Anime</NavLink>
-          <NavLink to="/Horror">Horror</NavLink>
-        </nav>
-        
-      </section> */}
-
-
-      
-
-
-      
-
-
-      
 
 
     </>  
