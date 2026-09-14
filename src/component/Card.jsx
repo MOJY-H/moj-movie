@@ -1,3 +1,4 @@
+import React from 'react';
 import '../App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -10,12 +11,14 @@ const [movie,setMovie] = useState([]);
 const[load,setLoad] = useState(true);
 
   const inputData = async() =>{
-        const api = `https://api.jikan.moe/v4/top/anime?limit=20`;
-        const response = await fetch(api);
-        const dataResponse = await response.json();
-        setMovie(dataResponse);
-        console.log(dataResponse);
-        setLoad(false);
+    const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+    const api = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&primary_release_date.gte=2026-01-01&primary_release_date.lte=2026-12-31`;
+    const response = await fetch(api);
+    const dataResponse = await response.json();
+    console.log(dataResponse)
+    setMovie(dataResponse.results);
+    console.log(dataResponse);
+    setLoad(false);
   }
 
   useEffect(()=>{
@@ -31,29 +34,21 @@ const[load,setLoad] = useState(true);
 
   return (
 
-    <>
+    <div className='pt-4'>
 
-      <div className='flex flex-1 text-white mt-5'>
-              
-        <NavLink to="/Horro" className={({isActive})=> isActive ? 'flex place-items-center place-content-start' : 'flex place-items-center place-content-start text-white/20' }> <p className='flex-3 pl-2'> Horror </p> </NavLink>
+     {movie.map((item)=>{
+     return(
+      <>
+        <section key={item.id}  className='text-white'>
+          <h2>{item.original_title}</h2>
+        </section>
+      </>
+     )
+     })}
 
-        {/* <Routes>
-
-          <Route path="/Homepage" element={<Card />} />
-
-          <Route path="/:genre" element={<Card />} />
-
-        </Routes> */}
-        
-      </div>
-
-      <div>
-        
-      </div>
+     
       
-      
-
-    </>
+    </div>
   )
 }
 
