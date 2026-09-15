@@ -16,9 +16,9 @@ export default function App() {
 
         <section className='flex-1 h-screen flex flex-col bg-[#303042] '>
 
-          <div className='flex flex-col text-white pl-3 pr-3 max-sm:text-xs max-md:text-sm max-lg:text-sm lg:text-sm gap-4 pt-2 fixed'>
+          <div className='flex flex-col text-white pl-3 pr-3 max-sm:text-xs max-md:text-sm max-lg:text-sm lg:text-sm gap-4 pt-2 '>
 
-            <img src={logo} alt="Logo" className='-mt-2 cursor-pointer max-md:mt-0' />
+            <img src={logo} alt="Logo" className='-mt-2 cursor-pointer max-md:mt-0 ' />
 
             <div className='flex flex-col gap-4 max-sm:gap-3 '>
               <NavLink to='/' className={({isActive})=> isActive ? 'flex place-items-center place-content-start' : 'flex place-items-center place-content-start text-white/20' }> <House className=' flex-1 ' /> <p className='flex-3 pl-2'> Home </p> </NavLink>
@@ -52,7 +52,7 @@ export default function App() {
 
         <section className=' flex flex-col flex-4  bg-[#151328] px-5 overflow-hidden'>    
           
-          <div className='flex flex-col flex-1 text-white/40 gap-4 pt-4'>
+          <div className='flex flex-col flex-1 text-white/40 gap-4 pt-6'>
 
             <section className='flex flex-1 gap-4 max-sm:justify-between '>
 
@@ -84,7 +84,7 @@ export default function App() {
 
           <section className=' flex flex-col flex-1'>
 
-            <div className='flex text-white mt-5 gap-4 '>
+            <div className='flex text-white mb-4 mt-6 gap-4 '>
               
               <NavLink to="/Horro" className={({isActive})=> isActive ? 'flex place-items-center place-content-start text-black bg-white rounded-3xl ' : 'flex place-items-center place-content-start bg-[#303042] rounded-3xl '  }> <p className='flex-3 px-3.5 py-1'> Horror </p> </NavLink>
               <NavLink to="/Action" className={({isActive})=> isActive ? 'flex place-items-center place-content-start text-black bg-white rounded-3xl ' : 'flex place-items-center place-content-start bg-[#303042] rounded-3xl '  }> <p className='flex-3 px-3.5 py-1'> Action </p> </NavLink>
@@ -94,13 +94,15 @@ export default function App() {
 
               <Routes>
 
-                {/* <Route path="/Homepage" element={<Card />} /> */}
+                <Route path="/Homepage" element={<Card />} />
 
                 <Route path="/:genre" element={<Card />} />
 
               </Routes>
               
             </div>
+
+            <h1 className='text-white text-3xl pb-4'> All Shows </h1>
 
             <Card  />
 

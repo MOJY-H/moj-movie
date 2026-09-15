@@ -12,10 +12,10 @@ export default function SliderHero() {
     <>
        <section className='w-full'>
          <Swiper  spaceBetween={20} slidesPerView={1.4} navigation  modules={[Navigation,Pagination]}>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://thumb.wikimedia.org/wikipedia/en/thumb/4/4e/Elio_film_poster.jpg/250px-Elio_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://upload.wikimedia.org/wikipedia/en/f/f7/Inside_Out_2_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://thumb.wikimedia.org/wikipedia/en/thumb/4/4e/Elio_film_poster.jpg/250px-Elio_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://thumb.wikimedia.org/wikipedia/en/thumb/4/4e/Elio_film_poster.jpg/250px-Elio_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/1/4600.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/2/5028.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/316/792450.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/118/295401.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
         </Swiper>
        </section>
     </>
