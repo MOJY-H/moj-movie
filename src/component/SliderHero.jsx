@@ -11,11 +11,11 @@ export default function SliderHero() {
   return (
     <>
        <section className='w-full'>
-         <Swiper  spaceBetween={20} slidesPerView={1.4} navigation  modules={[Navigation,Pagination]}>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/1/4600.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/2/5028.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/316/792450.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
-            <SwiperSlide><div className=' w-full h-75 rounded-sm bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/118/295401.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+         <Swiper  spaceBetween={20} slidesPerView={1.4} navigation modules={[Navigation,Pagination]}>
+            <SwiperSlide><div className=' w-full h-75 rounded-md bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/1/4600.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-md bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/2/5028.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-md bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/316/792450.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
+            <SwiperSlide><div className=' w-full h-75 rounded-md bg-[url(https://static.tvmaze.com/uploads/images/original_untouched/118/295401.jpg)] bg-cover bg-no-repeat bg-center' ></div></SwiperSlide>
         </Swiper>
        </section>
     </>
