@@ -49,7 +49,7 @@ const {genres} = useParams();
         movie.filter((item) => item.genres.includes(genres)).map((item)=>{
           return(
           <>
-          <NavLink to='/Single'>
+          <NavLink to='/:genres/:id'>
             <section key={item.id}  className='text-white flex place-items-center hover:-translate-y-2 transition-all duration-1000 hover:shadow-lg rounded-lg hover:shadow-white/10 cursor-pointer '>
               <div className=' flex flex-col gap-2 '>
 

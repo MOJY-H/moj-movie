@@ -25,26 +25,26 @@ export default function App() {
             <img src={logo} alt="Logo" className='-mt-2 cursor-pointer max-md:mt-0 w-[90%] ' />
 
             <div className='flex flex-col gap-4 max-sm:gap-3 '>
-              <NavLink to='/' className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <House className=' flex-1 ' /> <p className='flex-3 pl-2'> Home </p> </NavLink>
-              <NavLink to="/Explore/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Compass className=' flex-1 ' /> <p className='flex-3 pl-2'> Explore </p> </NavLink>
-              <NavLink to="/Genres/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Layers2 className=' flex-1 ' /> <p className='flex-3 pl-2'> Genres </p> </NavLink>
-              <NavLink to="/Favourite/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Bookmark className=' flex-1 ' /> <p className='flex-3 pl-2'> Favourites </p> </NavLink>
+              <NavLink to='/' className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <House className=' flex-1 ' /> <p className='flex-3 pl-2'> Home </p> </NavLink>
+              <NavLink to="/Explore/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Compass className=' flex-1 ' /> <p className='flex-3 pl-2'> Explore </p> </NavLink>
+              <NavLink to="/Genres/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Layers2 className=' flex-1 ' /> <p className='flex-3 pl-2'> Genres </p> </NavLink>
+              <NavLink to="/Favourite/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Bookmark className=' flex-1 ' /> <p className='flex-3 pl-2'> Favourites </p> </NavLink>
             </div>
 
             <hr className='text-amber-50/20 -mr-3' />
 
             <div className='flex flex-col gap-4 max-sm:gap-3'>
-              <NavLink to="/CountinueWatch/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Play className=' flex-1 ' /> <p className='flex-3 pl-2'> Countinue Watching </p>  </NavLink>
-              <NavLink to="/RecentAdd/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <ClockFading className=' flex-1 ' /> <p className='flex-3 pl-2'> Recent Added </p> </NavLink>
-              <NavLink to="/Colloction/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <FilePlay className=' flex-1 ' /> <p className='flex-3 pl-2'> My Collections </p>  </NavLink>
-              <NavLink to="/Downloads/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Download className=' flex-1 ' /> <p className='flex-3 pl-2'> Downloads </p> </NavLink>
+              <NavLink to="/CountinueWatch/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Play className=' flex-1 ' /> <p className='flex-3 pl-2'> Countinue Watching </p>  </NavLink>
+              <NavLink to="/RecentAdd/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <ClockFading className=' flex-1 ' /> <p className='flex-3 pl-2'> Recent Added </p> </NavLink>
+              <NavLink to="/Colloction/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <FilePlay className=' flex-1 ' /> <p className='flex-3 pl-2'> My Collections </p>  </NavLink>
+              <NavLink to="/Downloads/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Download className=' flex-1 ' /> <p className='flex-3 pl-2'> Downloads </p> </NavLink>
             </div>
 
             <hr className='text-amber-50/20 -mr-3' />
 
             <div className='flex flex-col gap-4 max-sm:gap-3'>
-              <NavLink to="/Support/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Headset className=' flex-1 ' /> <p className='flex-3 pl-2'> Support </p> </NavLink>
-              <NavLink to="/Setting/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/20 hover:text-white/60 ' }> <Settings className=' flex-1 ' /> <p className='flex-3 pl-2'> Settings </p> </NavLink>
+              <NavLink to="/Support/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Headset className=' flex-1 ' /> <p className='flex-3 pl-2'> Support </p> </NavLink>
+              <NavLink to="/Setting/null" className={({isActive})=> isActive ? 'flex place-items-center place-content-start  ' : 'flex place-items-center place-content-start text-white/50 hover:text-white/60 ' }> <Settings className=' flex-1 ' /> <p className='flex-3 pl-2'> Settings </p> </NavLink>
             </div>
             </section>
 
@@ -106,7 +106,7 @@ export default function App() {
                 <Route path="/" element={<Home />} index />
 
                 <Route path="/:genres" element={<Card />} />
-                  <Route path='/:genres/single' element={<Single/>} />
+                  <Route path='/:genres/:id' element={<Single/>} />
                 <Route/>
 
               </Routes>
