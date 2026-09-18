@@ -19,7 +19,7 @@ const {genres} = useParams();
     const api = `https://api.tvmaze.com/shows?page=1`;
     const response = await fetch(api);
     const dataResponse = await response.json();
-    console.log(dataResponse)
+    console.log(dataResponse);
     setMovie(dataResponse);
     setLoad(false);
   }
@@ -48,7 +48,7 @@ const {genres} = useParams();
         movie.map((item)=>{
           return(
           <>
-            <section key={item.id}  className='text-white flex place-items-center hover:-translate-y-2 transition-all duration-1000 hover:shadow-lg rounded-lg hover:shadow-white/10 cursor-pointer '>
+            <NavLink to={`/${genres}/${item.id}`} key={item.id} className='text-white flex place-items-center hover:-translate-y-2 transition-all duration-1000 hover:shadow-lg rounded-lg hover:shadow-white/10 cursor-pointer '>
               <div className=' flex flex-col gap-2 '>
 
                 <div className=' flex '>
@@ -61,9 +61,9 @@ const {genres} = useParams();
 
                 <div className='flex gap-3 -mt-1 text-xs px-2 pb-2'>
 
-                  <span className='text-white/40 line-clamp-1'>
-                    {item.premiered}
-                  </span>
+                  <span className='text-white/40 line-clamp-1 max-sm:text-xs'>
+                        {item.premiered}
+                      </span>
 
                   <span className='text-white/40'>  |  </span>
                   
@@ -74,7 +74,7 @@ const {genres} = useParams();
                 </div>
 
               </div>
-            </section>
+            </NavLink>
           </>
         )
         })}
