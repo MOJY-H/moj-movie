@@ -13,6 +13,7 @@ function ScrollToTopBtn() {
   }
 
   useEffect(() => {
+    
     window.addEventListener("scroll", handleScroll);
 
     return () => {

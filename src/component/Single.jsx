@@ -16,7 +16,7 @@ const {id} = useParams();
   const inputData = async() =>{
     // const apiKey = import.meta.env.VITE_TMDB_API_KEY;
     // const api = `https://api.themoviedb.org/8/discover/movie?api_key=${apiKey}&primary_release_date.gte=2026-01-01&primary_release_date.lte=2026-12-31`;
-    const api = `https://api.tvmaze.com/shows?page=1`;
+    const api = `https://api.tvmaze.com/shows/${id}`;
     const response = await fetch(api);
     const dataResponse = await response.json();
     console.log(dataResponse)
@@ -28,43 +28,48 @@ const {id} = useParams();
 
     inputData();
 
-  },[]);
+  },[id]);
 
   if (load) { 
     return( <div className='flex place-content-center place-items-center text-white flex-1  '> <span> Loading ... </span> </div>)
   }
 
 
+
   return (
     <>
         <div>
-            {/* <section className='text-white flex place-items-center hover:-translate-y-2 transition-all duration-1000 hover:shadow-lg rounded-lg hover:shadow-white/10 cursor-pointer '>
-                <div className=' flex flex-col gap-2 '>
+            <section className='text-white z-1 flex flex-col px-20 max-sm:px-10 absolute top-20 h-full left-[20%] w-[80%] max-md:w-full max-md:left-0 bg-[#151328] '>
 
-                <div className=' flex '>
-                    <img src={movie.image.original} className='aspect-2/3 rounded-lg transition-all duration-1000 hover:rounded-b-none ' alt="Poster" />
-                </div>
-            
-                <h2 className=' flex px-2 '>
-                    <span className='line-clamp-1 text-md '>{movie.name}</span>
-                </h2>
+                <div className=' justify-evenly flex place-items-start gap-2 pt-15  '>
 
-                <div className='flex gap-3 -mt-1 text-xs px-2 pb-2'>
+                  
+                  <img src={movie.image.original} className=' aspect-2/2.5 w-[40%] rounded-lg transition-all duration-1000 hover:rounded-b-none ' alt="Poster" />
+                  
 
-                    <span className='text-white/40 line-clamp-1'>
-                    {movie.premiered}
+                  <section className=' flex flex-col gap-2 '>
+
+                    <h2 className=' flex '>
+                        <span className=' text-md max-sm:text-lg text-5xl '>{movie.name}</span>
+                    </h2>
+
+                    <span className='text-white/40'>
+                      {movie.premiered}
                     </span>
-
-                    <span className='text-white/40'>  |  </span>
                     
                     <div className='flex text-[#D6A30C] gap-1'>
-                    <Star className='w-[50%] h-[70%]' color='#D6A30C' fill='#D6A30C' /> {movie.rating.average}
+                      <Star className='w-[10%] h-[10%] self-center ' color='#D6A30C' fill='#D6A30C' /> {movie.rating.average}
                     </div>
 
-                </div>
+                  </section>
 
                 </div>
-            </section> */}
+
+                <div>
+                  <article className='text-white/80 py-12 w-full max-sm:text-sm bg-[#151328] ' dangerouslySetInnerHTML={{__html : movie.summary }} />
+                </div>
+
+            </section>
         </div>
     </>
   )
