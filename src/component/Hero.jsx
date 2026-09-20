@@ -75,15 +75,10 @@ export default function Hero() {
                 <option value="orange">Orange</option>
             </select>  
 
-            <input type="text" placeholder='Movies, Series, Shows' className='bg-[#303042] flex-12 rounded-sm pl-2  ' />
+            <input type="text"  placeholder='Movies, Series, Shows' className='bg-[#303042] text flex-12 rounded-sm pl-2  ' />
 
             <div className='bg-[#303042] place-content-center place-items-center rounded-sm px-2 py-2 '>
                 <BellDot  />
-            </div>
-
-            <div className=' flex-1 max-md:hidden'>
-            {/* <img src={prof} alt="profile" className='w-10 h-10 rounded-full '/> */}
-                <LogIn  className='' />
             </div>
 
         </section>

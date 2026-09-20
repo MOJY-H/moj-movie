@@ -16,7 +16,7 @@ const {id} = useParams();
   const inputData = async() =>{
     // const apiKey = import.meta.env.VITE_TMDB_API_KEY;
     // const api = `https://api.themoviedb.org/8/discover/movie?api_key=${apiKey}&primary_release_date.gte=2026-01-01&primary_release_date.lte=2026-12-31`;
-    const api = ` https://api.tvmaze.com/shows/${id}`;
+    const api = `https://api.tvmaze.com/shows/${id}`;
     const response = await fetch(api);
     const dataResponse = await response.json();
     console.log(dataResponse)
@@ -33,6 +33,7 @@ const {id} = useParams();
   if (load) { 
     return( <div className='flex place-content-center place-items-center text-white flex-1  '> <span> Loading ... </span> </div>)
   }
+
 
 
   return (
@@ -65,7 +66,7 @@ const {id} = useParams();
                 </div>
 
                 <div>
-                  <p className='text-white/80 py-12 w-full max-sm:text-sm bg-[#151328]'> {movie.summary} </p>
+                  <article className='text-white/80 py-12 w-full max-sm:text-sm bg-[#151328] ' dangerouslySetInnerHTML={{__html : movie.summary }} />
                 </div>
 
             </section>
